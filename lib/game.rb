@@ -71,6 +71,4 @@ class Game
      end
 
 
-
-
   end
