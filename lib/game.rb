@@ -42,6 +42,7 @@ class Game
      if winning_combo = won?
        @winner = @board.cells[winninf_combo.first]
      end
+   end
 
    def turn
      player = current_player
