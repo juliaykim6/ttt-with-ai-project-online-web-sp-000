@@ -31,19 +31,19 @@ class Game
    end
 
    def draw?
-     @board.full && !won? 
-   end 
+     @board.full && !won?
+   end
 
-   def over? 
-     won? || draw? 
-   end 
+   def over?
+     won? || draw?
+   end
 
-   def turn 
-     player = current_player 
+   def turn
+     player = current_player
      current_move = player.move(@board)
      if !@board.valid_move?(current_move)
-       turn 
-     else 
+       turn
+     else
        puts "Turn: #{@board.turn_count+1}\n"
          @board.display
          @board.update(current_move, player)
