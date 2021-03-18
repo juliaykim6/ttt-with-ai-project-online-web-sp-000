@@ -38,8 +38,8 @@ class Game
      won? || draw?
    end
 
-   def winner 
-     if winning_combo = won? 
+   def winner
+     if winning_combo = won?
        @winner = @board.cells[winninf_combo.first]
      end
 
