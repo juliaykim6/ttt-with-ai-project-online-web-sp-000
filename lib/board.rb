@@ -22,7 +22,10 @@ class Board
   end
 
   def full?
-    cells.all? {|token| token == "X" || token = "O"}
+    if cells.all? {|token| token == "X" || token = "O"}
+      return true
+    else
+      false
   end
 
   def turn_count
