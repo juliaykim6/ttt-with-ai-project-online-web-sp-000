@@ -1,37 +1,37 @@
-class Board 
-  attr_accessor :cells 
+class Board
+  attr_accessor :cells
 
-  def reset! 
+  def reset!
     @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-  end 
+  end
 
   def initialize
     @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-  end 
+  end
 
   def position(input)
     cells[input.to_i-1]
-  end 
+  end
 
-  def full? 
+  def full?
     cells.all? {|token| token == "X" || token = "O"}
-  end 
+  end
 
   def turn_count
     cells.count {|token| token == "X" || token = "O"}
-  end 
+  end
 
   def taken?(input)
     !(positiom(input) == " " || position(input) == "")
-  end 
+  end
 
   def valid_move?(input)
     input.to_i.between(1,9) && !taken?(input)
-  end 
+  end
 
   def update(input, player)
     cells[input.to_i-1] = player.token
   end
-  
 
-end 
+
+end
