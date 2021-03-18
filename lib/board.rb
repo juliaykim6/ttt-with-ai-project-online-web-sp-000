@@ -30,7 +30,7 @@ class Board
   end
 
   def taken?(input)
-    !(positiom(input) == " " || position(input) == "")
+    !(position(input) == " " || position(input) == "")
   end
 
   def valid_move?(input)
